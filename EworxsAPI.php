@@ -3070,7 +3070,7 @@ function sendInvoiceEmail($email, $fileName, $body)
 {
 
 
-$apiKey = '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';
+$apiKey = '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';
 $toEmail = $email;
 $subject = 'Eworxs Invoice';
 $htmlContent ='<h1>Invoice has been sent.</h1>';
@@ -3193,7 +3193,7 @@ curl_close($ch);
 
 function sendEmail2($email, $fileName)
 {
-  $apiKey = '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';
+  $apiKey = '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';
 $toEmail = $email;
 $subject = 'Eworxs Invoice';
 $htmlContent = '<pre>Dear Client,
@@ -3301,7 +3301,7 @@ function sendEmail1($email, $fileName = "", $fileName1 = "", $visitid = "")
       {
          $loop1 = false;
 
-$apiKey = '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';
+$apiKey = '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';
 $toEmail = $email;
 $subject = 'Eworxs Invoice';
 $htmlContent = '<pre>Dear Client,
@@ -3669,7 +3669,7 @@ function company_visit_count($worker_id, $company_client_id)
 function testemail()
 {
 
-$apiKey = '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';
+$apiKey = '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';
 $toEmail = 'cresoluser@gmail.com';
 $subject = 'Eworxs Invoice';
 $htmlContent ='<h1>Invoice has been sent.</h1>';
