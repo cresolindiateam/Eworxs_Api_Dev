@@ -1,6 +1,5 @@
 <?php
 require "vendor/autoload.php";
-
 require "Eworxsmysql.php";
 require "fpdf.php";
 require_once "googlecloudvendor/autoload.php";
