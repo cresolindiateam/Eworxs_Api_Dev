@@ -29,4 +29,4 @@ jobs:
           username: ${{ secrets.DEV_API_FTP_USER }}
           password: ${{ secrets.DEV_API_PASSWORD }}
           local-dir: ./  # If your whole repo should be uploaded
-          server-dir: /devapi/  # Your FTP path
+          server-dir: /devapi2/  # Your FTP path
