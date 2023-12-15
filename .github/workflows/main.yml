@@ -1,0 +1,32 @@
+name: PHP CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - dev
+      
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # Add steps here to set up PHP, install dependencies, and run tests if applicable
+
+  deploy_to_dev:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: FTP Deploy Action To dev
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          if: "github.event_name == 'push' && github.ref == 'refs/heads/dev'"
+          server: ${{ secrets.DEV_API_FTP_SERVER }}
+          username: ${{ secrets.DEV_API_FTP_USER }}
+          password: ${{ secrets.DEV_API_PASSWORD }}
+          local-dir: ./  # If your whole repo should be uploaded
+          server-dir: /devapi/  # Your FTP path
